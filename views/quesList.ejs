@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include head %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../favicon.ico">
+  <script src="/javascripts/jquery-3.0.0.min.js"></script>
+  <script src="/javascripts/bootstrap.min.js "></script>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/quesList.css">
+
+  <script src="javascripts/moment.min.js"></script>
+  <script type="text/javascript" src="/javascripts/common.js"></script>
+  <link rel="stylesheet" href="/stylesheets/common.css">
+<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+</head>
+
+<body>
+  <%- include nav %>
+  <!-- /.navbar -->
+
+  <div class="container">
+      <div class="jumbotron">
+        <h1>知晓</h1>
+        <p>唐 韩愈 《与崔群书》：“仆愚陋无所知晓，然圣人之书，无所不读。”郭小川 《茫茫大海中的小舟》诗：“这个岛呵，离大陆只不过十哩之遥，开天辟地以来，却好像无人知晓。”</p>
+        <p><a class="btn btn-primary btn-lg" href="/mess" role="button">问</a></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <ul class="nav nav-tabs label-list">
+    <li role="presentation" class="active"><a href="/quesList?user_label=HTML5">HTML</a></li>
+    <li role="presentation"><a href="/quesList?user_label=CSS3">CSS3 </a></li>
+    <li role="presentation"><a href="/quesList?user_label=Javascript">Javascript </a></li>
+    <li role="presentation"><a href="/quesList?user_label=jQuery">jQuery </a></li>
+    <li role="presentation"><a href="/quesList?user_label=Ajax">Ajax </a></li>
+    <li role="presentation"><a href="/quesList?user_label=Node.js">Node.js </a></li>
+    <li role="presentation"><a href="/quesList?user_label=Express">Express </a></li>
+    <li role="presentation"><a href="/quesList?user_label=MongoDB">MongoDB </a></li>
+    <li role="presentation"><a href="/quesList?user_label=Mongoose">Mongoose </a></li>
+    <li role="presentation"><a href="/quesList?user_label=React">React </a></li>
+    <li role="presentation"><a href="/quesList?user_label=Python">Python </a></li>
+    <li role="presentation"><a href="/quesList?user_label=UI框架">UI框架 </a></li>
+    </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-9">
+          <div class="panel panel-primary">
+            <div class="panel-body row-panel">
+              <!-- Table -->
+              <% data.forEach(function(item, index){ %>
+                <%- include('cell', {item: item}) %>
+              <% }) %>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="panel panel-warning">
+            <div class="panel-body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+<%- include footer %>
+</body>
+
+</html>

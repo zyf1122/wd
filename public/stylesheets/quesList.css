@@ -1,0 +1,158 @@
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@-ms-viewport     { width: device-width; }
+@-o-viewport      { width: device-width; }
+@viewport         { width: device-width; }
+
+
+
+.title {
+  width: 94%;
+  margin: 0 auto;
+  height: 25px;
+}
+
+.show {
+  position: relative;
+  border-top: 1px dashed #ddd;
+  margin: 10px 0 20px;
+  padding-top: 15px;
+
+
+}
+.title .txt-left {
+  text-align: right;
+  font-size: 10px;
+}
+
+span {
+  font-size: 10px;
+}
+
+.show .answer {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+}
+
+.jumbotron {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 247, 194);
+}
+
+@media screen and (min-width: 768px){
+  .show  {
+      min-height: 90px;
+  }
+
+.jumbotron .h1, .jumbotron h1 {
+     font-size: 33px;
+}
+}
+@media screen and (max-width: 768px){
+.show  {
+    min-height: 90px;
+    postion: relative;
+}
+.show .title .tip {
+  padding-bottom: 0px;
+}
+.show .question {
+  font-size: 9px;
+}
+.show .move {
+  position: absolute;
+  right:0;
+  top: 0;
+  padding: 0;
+  font-size: 10px;
+}
+h1 {
+  font-size: 20px;
+}
+.container .jumbotron p {
+  font-size: 11px;
+}
+}
+/*label*/
+
+.show {
+  font-family: 'Arimo', sans-serif;
+}
+
+.row-panel {
+  min-height: 600px;
+}
+
+.jumbotron p{
+  font-size: 16px;
+}
+
+.label-danger {
+    background-color: rgb(208, 228, 197);
+}
+
+.show .dianzan span {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.show .dianzan .label {
+  color: black;
+  font-size: 8px;
+  font-weight: normal;
+}
+
+.show .question, .show .tip {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  max-height: 100px;
+}
+
+.show .question {
+  width: 100%;
+  max-width: 400px;
+  color: rgb(113, 113, 113);
+  letter-spacing: 1px;
+}
+
+.show .tip {
+  width: 100%;
+  max-width: 350px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+}
+
+.show .user {
+display: inline-block;
+padding-right: 20px;
+color: red;
+}
+
+.show .time {
+  padding: 10px;
+}
+.show .user_label {
+  color: rgb(209, 209, 209);
+}
+
+.label-list {
+ margin: 10px 17px 20px ;
+}
+
+.label-list a {
+  font-size: 16px;
+}
+ .row .label-list>li>a:hover {
+    border-color: rgb(181, 203, 226);
+}

@@ -1,0 +1,21 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "~0.7.4",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.9",
+    "morgan": "~1.0.0",
+    "socket.io": "^2.0.3",
+    "static-favicon": "^2.0.0-alpha"
+  }
+}

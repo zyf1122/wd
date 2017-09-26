@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon"href="images/logo.ico">
+    <title><%= title %></title>
+    <style media="screen">
+      *{
+        margin:0;
+        padding:0;
+      }
+      html,body{
+        width:100%;
+        height:100%;
+        background: url('images/login-cg.jpg') center center;
+        background-size: cover;
+      }
+      .box{
+        max-width:360px;
+        height: 470px;
+        margin: 0 auto;
+        padding:50px 50px 0 50px;
+        background: rgba(171, 171, 171, 0.25);
+        position: relative;
+        top:10%;
+      }
+      h1{
+        font-size: 58px;
+        text-align: center;
+        color: #0140ff;
+        text-shadow: 3px 2px 3px white;
+      }
+      span{
+        height:35px;
+        line-height:35px;
+        margin-top: 10px;
+        display: inline-block;
+        color: white;
+      }
+      input{
+        font-size: 28px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(129, 129, 129, 0.39);
+        background: white;
+        width:100%;
+        max-width:360px;
+        background-color: rgba(161, 161, 161, 0.53);
+
+      }
+      input[type="text"]:focus,input[type="password"]:focus{
+        outline: none;
+        border: 1px solid #b4b4b4;
+        background: rgba(124, 124, 124, 0.9);
+        height: 32px;
+        background-color: rgba(66, 66, 66, 0.8);
+        color:#fff;
+      }
+      button{
+        width:100%;
+        max-width: 358px;
+        height: 30px;
+        margin-top: 30px;
+        font-size: 18px;
+        background-color: rgba(255, 255, 255, 0.39);
+        border: none;
+        color: #ffffff;
+      }
+      button:hover{
+        background: white;
+        color: #000;
+        cursor:pointer;
+      }
+      button a{
+        color: white;
+      }
+      button:hover a{
+        color: #000;
+      }
+      p{
+        width:20%;
+      }
+      p a{
+        color: white;
+        display:block;
+        height:50px;
+        line-height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box col-sm-12 col-lg-12">
+      <h1>login</h1>
+      <form class="" action="/login_cg" method="post">
+        <span>用户名:</span><input type="text" name="user_id"><br>
+        <span>密码:</span><input type="password" name="password"><br>
+        <button type="submit">login</button>
+        <p><a href="/input_cg">注册</a></p>
+      </form>
+      <p><a href="/">返回首页</a></p>
+      <p><a href="user">找回密码</a></p>
+    </div>
+  </body>
+    <script type="text/javascript">
+  function GetQueryString(name)
+  {
+       var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+       var r = window.location.search.substr(1).match(reg);
+       if(r!=null)return  unescape(r[2]); return null;
+  }
+
+    var xiu =GetQueryString("xiu");
+    if(xiu == 'update'){
+      alert('修改密码成功!');
+    }
+  </script>
+</html>
